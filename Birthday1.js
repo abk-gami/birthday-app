@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Modal } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Modal, Button } from 'react-native'
 import React, {useState} from 'react'
 
 const Birthday1 = () => {
@@ -6,9 +6,12 @@ const Birthday1 = () => {
   return (
     <SafeAreaView style={styles.container}>
 
-        <Modal animationType='slide'>
-            <View>
+        <Modal animationType='slide' visible={!modalVisible}>
+            <View style={styles.body}>
                 <Text style={{fontSize:20}}>Wrong Answer!</Text>
+
+
+                <Button title='OK' onPress={() => setModalVisible(!modalVisible)}/>
             </View>
         </Modal>
 
@@ -23,7 +26,7 @@ const Birthday1 = () => {
 
         <View>
             <View style={styles.body}>
-                <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}><Text style={styles.buttonText}>
                  A midfielder in NPFL
                     </Text></TouchableOpacity>
                 <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
