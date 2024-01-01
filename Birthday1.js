@@ -1,9 +1,16 @@
-import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Modal } from 'react-native'
+import React, {useState} from 'react'
 
 const Birthday1 = () => {
+    const [modalVisible, setModalVisible] = useState(true);
   return (
     <SafeAreaView style={styles.container}>
+
+        <Modal animationType='slide'>
+            <View>
+                <Text style={{fontSize:20}}>Wrong Answer!</Text>
+            </View>
+        </Modal>
 
         <View style={styles.first}>
             <Text style={styles.text}>Choose the Correct Option from the ones below:</Text>
@@ -17,19 +24,19 @@ const Birthday1 = () => {
         <View>
             <View style={styles.body}>
                 <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
-                 A.   A midfielder in NPFL
+                 A midfielder in NPFL
                     </Text></TouchableOpacity>
                 <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
-                 B.   A midfielder in Spain
+                 A midfielder in Spain
                     </Text></TouchableOpacity>
                     
             </View>
             <View  style={styles.body}>
-                <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
-                 C.   A midfielder in England
+                <TouchableOpacity style={styles.button} ><Text style={styles.buttonText}>
+                 A midfielder in England
                     </Text></TouchableOpacity>
                 <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
-                 D.   A midfielder in Germany
+                 A midfielder in Germany
                     </Text></TouchableOpacity>
                     
             </View>
@@ -43,6 +50,7 @@ export default Birthday1
 const styles = StyleSheet.create({
     container: {
         paddingTop: 45,
+        paddingHorizontal: 10,
         flex: 1,
         backgroundColor: '#ff00d0',
     },
@@ -54,7 +62,8 @@ const styles = StyleSheet.create({
     text1:{
         color: '#fff',
         fontSize: 20,
-        fontWeight: '900'
+        fontWeight: '900',
+        marginBottom: 25,
     },
     button:{
         alignItems:'center',
@@ -62,6 +71,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical: 13,
         borderRadius: 8,
+        width: '45%',
     },
     buttonText: {
         color: '#201c1c',
