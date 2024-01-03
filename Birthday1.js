@@ -39,7 +39,7 @@ const Birthday1 = () => {
             animationType='slide'
         >
             <View style={styles.modalContainer}>
-                <Text> Modal Content</Text>
+                <Text> Modal Content</Text> 
                 <TouchableOpacity style={styles.modalButton} onPress={() => setIsModalVisible(false)}><Text style={styles.modalButtonText}>Close</Text></TouchableOpacity>
             </View>
         </Modal>
