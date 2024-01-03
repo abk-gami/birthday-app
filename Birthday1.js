@@ -1,20 +1,11 @@
-import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Modal, Button } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Pressable, Modal } from 'react-native'
 import React, {useState} from 'react'
 
 const Birthday1 = () => {
-    const [modalVisible, setModalVisible] = useState(true);
+
+    const [isModalVisible, setIsModalVisible] = useState(false)
   return (
-    <SafeAreaView style={styles.container}>
-
-        <Modal animationType='slide' visible={!modalVisible}>
-            <View style={styles.body}>
-                <Text style={{fontSize:20}}>Wrong Answer!</Text>
-
-
-                <Button title='OK' onPress={() => setModalVisible(!modalVisible)}/>
-            </View>
-        </Modal>
-
+    <View style={styles.container}>
         <View style={styles.first}>
             <Text style={styles.text}>Choose the Correct Option from the ones below:</Text>
         </View>
@@ -23,10 +14,9 @@ const Birthday1 = () => {
             <Text style={styles.text1}>Gravenberch is .........</Text>
         </View>
 
-
         <View>
             <View style={styles.body}>
-                <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} ><Text style={styles.buttonText}>
                  A midfielder in NPFL
                     </Text></TouchableOpacity>
                 <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
@@ -44,7 +34,13 @@ const Birthday1 = () => {
                     
             </View>
         </View>
-    </SafeAreaView>
+        <Modal>
+            <View style={styles.modalContainer}>
+                <Text> Modal Content</Text>
+                <TouchableOpacity style={styles.modalButton}><Text style={styles.modalButtonText}>Close</Text></TouchableOpacity>
+            </View>
+        </Modal>
+    </View>
   )
 }
 
@@ -57,6 +53,12 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#ff00d0',
     },
+    modalContainer: {
+        // paddingTop: 45,
+        // paddingHorizontal: 10,
+        flex: 1,
+        backgroundColor: '#00ff1e',
+    },
     text:{
         color: '#fff',
         fontSize: 17,
@@ -67,6 +69,18 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '900',
         marginBottom: 25,
+    },
+    modalButton:{
+        alignItems:'center',
+        backgroundColor: '#fff',
+        paddingHorizontal: 15,
+        paddingVertical: 13,
+        borderRadius: 8,
+        width: '45%',
+    },
+    modalButtonText: {
+        color: '#201c1c',
+        fontWeight: '800'
     },
     button:{
         alignItems:'center',
