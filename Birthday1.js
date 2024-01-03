@@ -16,28 +16,31 @@ const Birthday1 = () => {
 
         <View>
             <View style={styles.body}>
-                <TouchableOpacity style={styles.button} ><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} onPress={() => setIsModalVisible(true) }><Text style={styles.buttonText}>
                  A midfielder in NPFL
                     </Text></TouchableOpacity>
-                <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} onPress={() => setIsModalVisible(true)}><Text style={styles.buttonText}>
                  A midfielder in Spain
                     </Text></TouchableOpacity>
                     
             </View>
             <View  style={styles.body}>
-                <TouchableOpacity style={styles.button} ><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} onPress={()=> setIsModalVisible(true)}><Text style={styles.buttonText}>
                  A midfielder in England
                     </Text></TouchableOpacity>
-                <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} onPress={()=> setIsModalVisible(true)}><Text style={styles.buttonText}>
                  A midfielder in Germany
                     </Text></TouchableOpacity>
                     
             </View>
         </View>
-        <Modal>
+        <Modal visible={isModalVisible}
+            onRequestClose={()=> setIsModalVisible(false)}
+            animationType='slide'
+        >
             <View style={styles.modalContainer}>
                 <Text> Modal Content</Text>
-                <TouchableOpacity style={styles.modalButton}><Text style={styles.modalButtonText}>Close</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.modalButton} onPress={() => setIsModalVisible(false)}><Text style={styles.modalButtonText}>Close</Text></TouchableOpacity>
             </View>
         </Modal>
     </View>
@@ -57,6 +60,7 @@ const styles = StyleSheet.create({
         // paddingTop: 45,
         // paddingHorizontal: 10,
         flex: 1,
+        // height: 100,
         backgroundColor: '#00ff1e',
     },
     text:{
