@@ -37,6 +37,7 @@ const Birthday1 = () => {
         <Modal visible={isModalVisible}
             onRequestClose={()=> setIsModalVisible(false)}
             animationType='slide'
+            transparent={true}
         >
             <View style={styles.modalContainer}>
                 <Text> Modal Content</Text> 
@@ -59,9 +60,14 @@ const styles = StyleSheet.create({
     modalContainer: {
         // paddingTop: 45,
         // paddingHorizontal: 10,
-        flex: 1,
-        // height: 100,
+        // flex: 1,
+        height: 100,
         backgroundColor: '#00ff1e',
+        width: '55%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center',
+        top: '30%',
     },
     text:{
         color: '#fff',
