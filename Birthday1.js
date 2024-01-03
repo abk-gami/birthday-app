@@ -19,7 +19,7 @@ const Birthday1 = () => {
                 <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Wrong Answer') }><Text style={styles.buttonText}>
                  A midfielder in NPFL
                     </Text></TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => setIsModalVisible(true)}><Text style={styles.buttonText}>
+                <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Wrong Answer')}><Text style={styles.buttonText}>
                  A midfielder in Spain
                     </Text></TouchableOpacity>
                     
