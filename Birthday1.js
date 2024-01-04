@@ -11,7 +11,7 @@ const Birthday1 = () => {
         </View>
 
         <View style={styles.second}>
-            <Text style={styles.text1}>Gravenberch is ..... ...</Text>
+            <Text style={styles.text1}>Gravenberch is ........</Text>
         </View>
 
         <View>
