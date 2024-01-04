@@ -79,7 +79,7 @@ const CelebrateBirthday = () => {
           value={specialMessage}
         />
         <TouchableOpacity onPress={showBirthdayCard}>
-          <Text style={styles.buttonText}>Show Birthday Car</Text>
+          <Text style={styles.buttonText}>Show Birthday Card</Text>
         </TouchableOpacity>
       </View>
       {showBirthdayCard()}
