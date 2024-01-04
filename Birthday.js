@@ -29,7 +29,7 @@ const CelebrateBirthday = () => {
       return (
         <View style={styles.birthdayCard}>
           <Text style={styles.cardText}>Happy Birthday {name}!</Text>
-          <Text style={styles.cardText}>You are n {age} years old.</Text>
+          <Text style={styles.cardText}>You are now {age} years old.</Text>
           <Text style={styles.cardText}>
             Born on {month} {date}, {year}.
           </Text>
