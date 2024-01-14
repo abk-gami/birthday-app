@@ -13,7 +13,7 @@ const Birthday1 = () => {
         <View style={styles.second}>
             <Text style={styles.text1}>Gravenberch is ........</Text>
         </View>
-
+ 
         <View>
             <View style={styles.body}>
                 <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Wrong Answer') }><Text style={styles.buttonText}>
