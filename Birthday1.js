@@ -2,7 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView, Pressable, Moda
 import React, {useState} from 'react'
 
 const Birthday1 = () => {
-   
+    
     const [isModalVisible, setIsModalVisible] = useState(false)
   return (
     <View style={styles.container}>
